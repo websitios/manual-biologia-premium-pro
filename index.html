@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Biología Premium PRO</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #f5f8fa;
+            color: #333;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: #003d73;
+            padding: 30px 20px;
+            color: white;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-size: 14px;
+        }
+
+        .sidebar a:hover {
+            color: #00d4ff;
+        }
+
+        /* Main content */
+        .content {
+            margin-left: 270px;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #003d73;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #003d73;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #0057a4;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #006cc1;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        p, li {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-top: 5px;
+        }
+
+        .card {
+            background: white;
+            padding: 24px 26px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            margin-bottom: 35px;
+        }
+
+        code, pre {
+            font-family: "Consolas", "Courier New", monospace;
+            font-size: 13px;
+            background: #eef1f4;
+            padding: 4px 6px;
+            border-radius: 4px;
+        }
+
+        pre {
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .back-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #003d73;
+            color: #fff;
+            border-radius: 20px;
+            padding: 8px 14px;
+            font-size: 13px;
+            text-decoration: none;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        .back-top:hover {
+            background: #0057a4;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+            .content {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar de navegación -->
+    <div class="sidebar">
+        <h2>Manual Biología<br>Premium PRO</h2>
+        <a href="#presentacion">Presentación</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#requisitos">Requisitos del sistema</a>
+        <a href="#instalacion">Instalación</a>
+        <a href="#primera">Primera ejecución</a>
+        <a href="#menu">Menú principal</a>
+        <a href="#palabras">Modo Palabras</a>
+        <a href="#lectura">Modo Lectura</a>
+        <a href="#quiz">Modo Quiz</a>
+        <a href="#config">Panel de configuración</a>
+        <a href="#ia">Asistente IA</a>
+        <a href="#estructura">Estructura interna</a>
+        <a href="#problemas">Solución de problemas</a>
+        <a href="#pedagogia">Recomendaciones pedagógicas</a>
+        <a href="#creditos">Créditos y licencia</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content" id="top">
+        
+        <!-- Presentación -->
+        <div class="card" id="presentacion">
+            <h1>Presentación</h1>
+            <p><strong>Biología Premium PRO</strong> es un aplicativo educativo interactivo diseñado para estudiantes de educación primaria. 
+            Su objetivo es transformar el aprendizaje de las Ciencias Naturales mediante:</p>
+
+            <ul>
+                <li>Imágenes de alta calidad y enfoque infantil.</li>
+                <li>Audio en español y aymara.</li>
+                <li>Lecturas guiadas y narradas.</li>
+                <li>Actividades tipo test (quiz).</li>
+                <li>Un asistente inteligente integrado basado en IA.</li>
+            </ul>
+
+            <p>
+                Este manual web describe en detalle el funcionamiento, la lógica pedagógica y la estructura técnica del aplicativo,
+                con el propósito de apoyar a docentes, estudiantes y administradores de la plataforma.
+            </p>
+        </div>
+
+        <!-- Objetivos -->
+        <div class="card" id="objetivos">
+            <h1>Objetivos del Aplicativo</h1>
+
+            <h2>Objetivos educativos</h2>
+            <ul>
+                <li>Desarrollar habilidades cognitivas en Ciencias Naturales.</li>
+                <li>Integrar lenguaje visual, auditivo y textual en una sola experiencia.</li>
+                <li>Promover el aprendizaje bilingüe Español–Aymara, respetando la diversidad cultural.</li>
+            </ul>
+
+            <h2>Objetivos tecnológicos</h2>
+            <ul>
+                <li>Ofrecer una interfaz moderna, clara y accesible para niños y docentes.</li>
+                <li>Permitir la actualización de contenidos sin necesidad de modificar el núcleo del sistema.</li>
+                <li>Incorporar un módulo de inteligencia artificial como recurso de apoyo pedagógico.</li>
+            </ul>
+        </div>
+
+        <!-- Requisitos -->
+        <div class="card" id="requisitos">
+            <h1>Requisitos del Sistema</h1>
+
+            <h2>Requisitos mínimos</h2>
+            <ul>
+                <li>Sistema operativo: Windows 10.</li>
+                <li>Memoria RAM: 2 GB.</li>
+                <li>Espacio libre en disco: 500 MB.</li>
+                <li>Resolución de pantalla mínima: 1280 × 720 píxeles.</li>
+                <li>Altavoces o audífonos funcionales.</li>
+            </ul>
+
+            <h2>Requisitos recomendados</h2>
+            <ul>
+                <li>Sistema operativo: Windows 10 u 11.</li>
+                <li>Memoria RAM: 4 GB o más.</li>
+                <li>Conexión a internet estable (para funciones de IA y actualizaciones).</li>
+                <li>Pantalla HD o superior.</li>
+            </ul>
+        </div>
+
+        <!-- Instalación -->
+        <div class="card" id="instalacion">
+            <h1>Instalación del Programa</h1>
+
+            <h2>Instalación mediante archivo ejecutable (.exe)</h2>
+            <ol>
+                <li>Descargar el instalador oficial del aplicativo.</li>
+                <li>Hacer doble clic sobre el archivo descargado.</li>
+                <li>Seguir las instrucciones del asistente de instalación paso a paso.</li>
+                <li>Finalizar el proceso y abrir el programa desde el acceso directo del escritorio o el menú Inicio.</li>
+            </ol>
+
+            <h2>Versión portable (.zip)</h2>
+            <ol>
+                <li>Descargar el archivo comprimido en formato <code>.zip</code>.</li>
+                <li>Extraer todo el contenido en una carpeta de su preferencia.</li>
+                <li>Ejecutar el archivo <code>app.exe</code> (o el lanzador equivalente).</li>
+            </ol>
+        </div>
+
+        <!-- Primera ejecución -->
+        <div class="card" id="primera">
+            <h1>Primera Ejecución</h1>
+            <p>Al iniciar Biología Premium PRO por primera vez:</p>
+            <ul>
+                <li>Se muestra la pantalla de bienvenida con la identidad visual del aplicativo.</li>
+                <li>Se cargan los módulos principales (imágenes, audios, configuración inicial).</li>
+                <li>Se presenta el botón <strong>Iniciar</strong>, que conduce al menú principal.</li>
+            </ul>
+            <p>Es recomendable verificar que el volumen del sistema y los altavoces estén activos para aprovechar todas las funciones.</p>
+        </div>
+
+        <!-- Menú principal -->
+        <div class="card" id="menu">
+            <h1>Menú Principal</h1>
+            <p>Desde el menú principal el usuario puede acceder a todos los módulos del aplicativo:</p>
+            <ul>
+                <li><strong>Modo Palabras</strong> – Vocabulario visual y auditivo.</li>
+                <li><strong>Modo Lectura</strong> – Textos breves y narrados.</li>
+                <li><strong>Modo Quiz</strong> – Actividades de evaluación interactiva.</li>
+                <li><strong>Configuración</strong> – Personalización del tema, idioma y volumen.</li>
+                <li><strong>Asistente IA</strong> – Consultas educativas basadas en inteligencia artificial.</li>
+                <li><strong>Salir</strong> – Cierra de forma segura el aplicativo.</li>
+            </ul>
+        </div>
+
+        <!-- Modo Palabras -->
+        <div class="card" id="palabras">
+            <h1>Modo Palabras</h1>
+
+            <h2>Descripción</h2>
+            <p>
+                El Modo Palabras permite que los estudiantes aprendan vocabulario de ciencias mediante imágenes, texto y audio.
+                Cada palabra está asociada a una ilustración y a su pronunciación en español y aymara.
+            </p>
+
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li>Selección de categorías (por ejemplo: animales, partes del cuerpo, naturaleza, etc.).</li>
+                <li>Visualización de una imagen educativa en el centro de la pantalla.</li>
+                <li>Texto con el nombre del elemento en español y en aymara.</li>
+                <li>Botón para reproducir la pronunciación en audio.</li>
+                <li>Botones de navegación anterior y siguiente.</li>
+            </ul>
+
+            <h2>Uso pedagógico sugerido</h2>
+            <ul>
+                <li>Introducir nuevos conceptos antes de una explicación teórica.</li>
+                <li>Relacionar la imagen del aplicativo con objetos reales del aula.</li>
+                <li>Trabajar vocabulario bilingüe y fortalecer la identidad cultural.</li>
+            </ul>
+        </div>
+
+        <!-- Modo Lectura -->
+        <div class="card" id="lectura">
+            <h1>Modo Lectura</h1>
+
+            <h2>Descripción</h2>
+            <p>
+                El Modo Lectura ofrece textos breves relacionados con temas de biología. 
+                Cada lectura puede acompañarse de una narración automática y de ilustraciones que facilitan la comprensión.
+            </p>
+
+            <h2>Características</h2>
+            <ul>
+                <li>Textos adaptados al nivel de educación primaria.</li>
+                <li>Botón para activar y pausar la narración.</li>
+                <li>Imágenes que complementan el contenido escrito.</li>
+                <li>Botones para avanzar y retroceder entre páginas de lectura.</li>
+            </ul>
+
+            <h2>Uso sugerido</h2>
+            <ul>
+                <li>Actividad de lectura guiada en el aula.</li>
+                <li>Comprensión lectora de temas específicos de ciencias.</li>
+                <li>Refuerzo de contenido luego de experiencias prácticas.</li>
+            </ul>
+        </div>
+
+        <!-- Modo Quiz -->
+        <div class="card" id="quiz">
+            <h1>Modo Quiz</h1>
+
+            <h2>Descripción</h2>
+            <p>
+                El Modo Quiz permite evaluar de forma lúdica los aprendizajes logrados, 
+                mediante preguntas de selección múltiple, verdadero/falso y actividades de asociación.
+            </p>
+
+            <h2>Tipos de preguntas</h2>
+            <ul>
+                <li>Selección múltiple con una respuesta correcta.</li>
+                <li>Relación imagen–palabra.</li>
+                <li>Preguntas de verdadero o falso.</li>
+            </ul>
+
+            <h2>Resultados finales</h2>
+            <ul>
+                <li>Puntaje obtenido por el estudiante.</li>
+                <li>Porcentaje de aciertos.</li>
+                <li>Mensaje de retroalimentación motivador.</li>
+            </ul>
+        </div>
+
+        <!-- Panel de configuración -->
+        <div class="card" id="config">
+            <h1>Panel de Configuración</h1>
+
+            <p>El Panel de Configuración permite personalizar la experiencia de uso del aplicativo.</p>
+
+            <h2>Tema visual</h2>
+            <ul>
+                <li><strong>Tema claro:</strong> fondo claro y alto contraste.</li>
+                <li><strong>Tema material:</strong> estilo moderno con tarjetas y sombras suaves.</li>
+                <li><strong>Tema oscuro:</strong> fondo oscuro ideal para ambientes con poca luz.</li>
+            </ul>
+
+            <h2>Control de volumen</h2>
+            <p>
+                El volumen general se ajusta mediante una barra deslizante con valores entre 0.0 y 1.0.
+                Este ajuste afecta a todos los sonidos del sistema: pronunciación, narraciones y efectos.
+            </p>
+
+            <h2>Selección de idioma</h2>
+            <ul>
+                <li><strong>Español</strong> – interfaz y mensajes en castellano.</li>
+                <li><strong>Aymara</strong> – interfaz adaptada para usuarios quechua-hablantes.</li>
+            </ul>
+
+            <h2>Otras opciones del panel</h2>
+            <ul>
+                <li><strong>Ayuda:</strong> muestra información básica de uso.</li>
+                <li><strong>Manual:</strong> abre este manual en formato digital.</li>
+                <li><strong>Actualizar:</strong> verifica si existen nuevas versiones o contenidos.</li>
+                <li><strong>Acerca del aplicativo:</strong> información del autor, versión y derechos.</li>
+            </ul>
+        </div>
+
+        <!-- Asistente IA -->
+        <div class="card" id="ia">
+            <h1>Asistente Inteligente IA</h1>
+
+            <h2>Funciones principales</h2>
+            <ul>
+                <li>Responder preguntas sobre temas de biología.</li>
+                <li>Explicar conceptos en lenguaje sencillo.</li>
+                <li>Proponer ejemplos y actividades para docentes.</li>
+                <li>Realizar traducciones básicas entre español y aymara.</li>
+            </ul>
+
+            <h2>Recomendaciones de uso</h2>
+            <ul>
+                <li>Verificar la información generada antes de compartirla en clase.</li>
+                <li>Utilizarlo como complemento y no como única fuente de conocimiento.</li>
+                <li>Supervisar el uso cuando interactúan estudiantes pequeños.</li>
+            </ul>
+        </div>
+
+        <!-- Estructura interna -->
+        <div class="card" id="estructura">
+            <h1>Estructura Interna del Proyecto</h1>
+
+            <p>La organización de archivos del aplicativo sigue una estructura clara y modular:</p>
+
+            <pre><code>data/
+    data_init.py
+    data.json
+assets/
+    images/
+    audio/
+modules/
+    ripple_button.py
+    welcome_screen.py
+    ai_window.py
+</code></pre>
+
+            <p>Cada palabra o elemento educativo se define mediante registros con la siguiente forma:</p>
+
+            <pre><code>{
+  "name": "A",
+  "img": "assets/images/img1/abuela.png",
+  "audio": "assets/audio/audio1/abuela.mp3",
+  "desc": {
+    "es": "Abuela.",
+    "ay": "Awicha."
+  }
+}</code></pre>
+        </div>
+
+        <!-- Solución de problemas -->
+        <div class="card" id="problemas">
+            <h1>Solución de Problemas</h1>
+
+            <h2>No se escucha el audio</h2>
+            <ul>
+                <li>Verificar el volumen del sistema operativo.</li>
+                <li>Revisar el valor de volumen en el Panel de Configuración.</li>
+                <li>Confirmar que los archivos de audio existan en la carpeta correspondiente.</li>
+            </ul>
+
+            <h2>No se muestran las imágenes</h2>
+            <ul>
+                <li>Comprobar las rutas indicadas en el archivo <code>data.json</code>.</li>
+                <li>Asegurarse de que la carpeta <code>assets/images</code> no haya sido renombrada o movida.</li>
+            </ul>
+
+            <h2>El asistente IA no funciona</h2>
+            <ul>
+                <li>Verificar que exista conexión a internet.</li>
+                <li>Revisar la configuración de la clave de API, en caso de utilizar una.</li>
+            </ul>
+        </div>
+
+        <!-- Recomendaciones pedagógicas -->
+        <div class="card" id="pedagogia">
+            <h1>Recomendaciones Pedagógicas</h1>
+
+            <ul>
+                <li>Iniciar las sesiones con el Modo Palabras para activar conocimientos previos.</li>
+                <li>Utilizar el Modo Lectura para profundizar en los temas tratados.</li>
+                <li>Emplear el Modo Quiz como mecanismo de evaluación formativa.</li>
+                <li>Apoyarse en el Asistente IA para diseñar ejemplos, tareas y actividades adicionales.</li>
+                <li>Integrar las actividades del aplicativo con el currículo oficial de Ciencias Naturales.</li>
+            </ul>
+        </div>
+
+        <!-- Créditos -->
+        <div class="card" id="creditos">
+            <h1>Créditos y Licencia</h1>
+
+            <h2>Autoría</h2>
+            <p>
+                Aplicativo y manual desarrollados por:<br>
+                <strong>Lic. José Luis Quispe Flores</strong><br>
+                Docente, investigador y desarrollador de software educativo.
+            </p>
+
+            <h2>Licencia</h2>
+            <p>
+                Biología Premium PRO y este manual están destinados al uso educativo en instituciones, docentes y estudiantes.
+                Se prohíbe su distribución o uso comercial sin autorización previa del autor.
+            </p>
+        </div>
+
+        <div class="footer">
+            Manual web Biología Premium PRO · 2025 · Lic. José Luis Quispe Flores
+        </div>
+
+    </div>
+
+    <a href="#top" class="back-top">Volver arriba</a>
+
+</body>
+</html>
